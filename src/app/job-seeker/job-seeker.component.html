@@ -3,7 +3,7 @@
 
 <form id="contact" class="container-fluid bg-grey">
   <h2 class="text-center">Submit Your Resume</h2>
-<hr>
+  <hr>
   <div class="row">
     <div class="form-group">
       <input class="form-control" id="name" name="name" placeholder="Name*" type="text" required>
@@ -18,46 +18,146 @@
       <br>
       <input class="form-control" id="experience" name="experience" placeholder="Experience(in years)*" type="number" required>
       <br>
+      <select class="form-control" name="functional_area">
+        <option value="0" style="display:none;">Function*</option>
+        <option value="62">Accounts, Finance, Tax, Company Secretary, Audit</option>
+        <option value="63">Analytics &amp; Business Intelligence</option>
+        <option value="64">Architecture, Interior Design</option>
+        <option value="65">Defence Forces, Security Services</option>
+        <option value="66">Design, Creative, User Experience</option>
+        <option value="67">Engineering Design, R&amp;D</option>
+        <option value="68">Executive Assistant, Front Office, Data Entry</option>
+        <option value="69">Export, Import, Merchandising</option>
+        <option value="70">Fashion Designing, Merchandising</option>
+        <option value="71">Financial Services, Banking, Investment, Insurance</option>
+        <option value="72">Hotels, Restaurants</option>
+        <option value="73">HR, Recruitment, Administration, IR</option>
+        <option value="75">IT Hardware, Technical Support, Telecom Eng</option>
+        <option value="76">IT Software - Application Programme, Maintenance</option>
+        <option value="77">IT Software - Client / Server Programming</option>
+        <option value="78">IT Software - DBA, Data warehousing</option>
+        <option value="79">IT Software - eCommerce, Internet Technologies</option>
+        <option value="80">IT Software - Embed, EDA, VLSI, ASIC, Chip Design</option>
+        <option value="81">IT Software - ERP, CRM</option>
+        <option value="82">IT Software - Mainframe</option>
+        <option value="83">IT Software - Middleware</option>
+        <option value="84">IT Software - Mobile</option>
+        <option value="85">IT Software - Network Administration, Security</option>
+        <option value="86">IT Software - Other</option>
+        <option value="87">IT Software - QA &amp; Testing</option>
+        <option value="88">IT Software - System Programming</option>
+        <option value="89">IT Software - Systems, EDP, MIS</option>
+        <option value="90">IT Software - Telecom Software</option>
+        <option value="74">ITES, BPO, KPO, LPO, Customer Service, Operation</option>
+        <option value="91">Journalism, Editing, Content</option>
+        <option value="92">Legal, Regulatory, Intellectual Property</option>
+        <option value="93">Marketing, Advertising, MR, PR, Media Planning</option>
+        <option value="94">Medical, Healthcare, R&amp;D, Pharma, Biotechnology</option>
+        <option value="95">Other</option>
+        <option value="96">Packaging</option>
+        <option value="97">Production, Manufacturing, Maintenance</option>
+        <option value="98">Sales, Retail, Business Development</option>
+        <option value="99">Self Employed, Entrepreneur, Independent Cons.</option>
+        <option value="100">Shipping</option>
+        <option value="101">Site Engineering, Project Management</option>
+        <option value="102">Strategy, Management Consulting, Corp. Planning</option>
+        <option value="103">Supply Chain, Logistics, Purchase, Materials</option>
+        <option value="104">Teaching, Education, Training, Counselling</option>
+        <option value="105">Top Management</option>
+        <option value="106">Travel, Tours, Ticketing, Airlines</option>
+        <option value="107">TV, Films, Production, Broadcasting</option>
+      </select>
+      <br>
+      <select class="form-control" name="industry">
+        <option value="0">Industry*</option>
+        <option value="110">Accounting / Finance</option>
+        <option value="111">Advertising / PR / MR / Event Management</option>
+        <option value="112">Agriculture / Dairy</option>
+        <option value="113">Animation / Gaming</option>
+        <option value="114">Architecture / Interior Design</option>
+        <option value="115">Automobile / Auto Anciliary / Auto Components</option>
+        <option value="116">Aviation / Aerospace Firms</option>
+        <option value="117">Banking / Financial Services / Broking</option>
+        <option value="118">BPO / Call Centre / ITES</option>
+        <option value="119">Brewery / Distillery</option>
+        <option value="120">Broadcasting</option>
+        <option value="121">Ceramics / Sanitary ware</option>
+        <option value="122">Chemicals / PetroChemical / Plastic / Rubber</option>
+        <option value="123">Construction / Engineering / Cement / Metals</option>
+        <option value="124">Consumer Electronics / Appliances / Durables</option>
+        <option value="125">Courier / Transportation / Freight / Warehousing</option>
+        <option value="126">Education / Teaching / Training</option>
+        <option value="127">Electricals / Switchgears</option>
+        <option value="128">Export / Import</option>
+        <option value="129">Facility Management</option>
+        <option value="130">Fertilizers / Pesticides</option>
+        <option value="131">FMCG / Foods / Beverage</option>
+        <option value="132">Food Processing</option>
+        <option value="133">Fresher / Trainee / Entry Level</option>
+        <option value="134">Gems / Jewellery</option>
+        <option value="135">Glass / Glassware</option>
+        <option value="136">Government / Defence</option>
+        <option value="137">Heat Ventilation / Air Conditioning</option>
+        <option value="138">Industrial Products / Heavy Machinery</option>
+        <option value="139">Insurance</option>
+        <option value="140">Internet / Ecommerce</option>
+        <option value="141">Iron and Steel</option>
+        <option value="142">IT-Hardware &amp; Networking</option>
+        <option value="143">IT-Software / Software Services</option>
+        <option value="144">KPO / Research / Analytics</option>
+        <option value="145">Leather</option>
+        <option value="146">Legal</option>
+        <option value="147">Media / Entertainment / Internet</option>
+        <option value="148">Medical / Healthcare / Hospitals</option>
+        <option value="149">Mining / Quarrying</option>
+        <option value="150">NGO / Social Services / Regulators / Industry Associations</option>
+        <option value="151">Office Equipment / Automation</option>
+        <option value="152">Oil and Gas / Energy / Power / Infrastructure</option>
+        <option value="153">Other</option>
+        <option value="154">Pharma / Biotech / Clinical Research</option>
+        <option value="155">Printing / Packaging</option>
+        <option value="156">Publishing</option>
+        <option value="157">Pulp and Paper</option>
+        <option value="158">Real Estate / Property</option>
+        <option value="159">Recruitment / Staffing</option>
+        <option value="160">Retail / Wholesale</option>
+        <option value="161">Security / Law Enforcement</option>
+        <option value="162">Semiconductors / Electronics</option>
+        <option value="163">Shipping / Marine</option>
+        <option value="164">Strategy / Management Consulting Firms</option>
+        <option value="165">Sugar</option>
+        <option value="166">Telecom/ISP</option>
+        <option value="167">Textiles / Garments / Accessories</option>
+        <option value="168">Travel / Hotels / Restaurants / Airlines / Railways</option>
+        <option value="169">Tyres</option>
+        <option value="170">Water Treatment / Waste Management</option>
+        <option value="171">Wellness / Fitness / Sports</option>
+      </select>
+      <br>
+      <select class="form-control" name="location">
+        <option value="0">Location*</option>
+
+        <option value="1611">Adilabad</option>
+
+        <option value="9">Agartala</option>
+        <option value="1421">Agoura Hills</option>
+        <option value="10">Agra</option>
+        <option value="1">Ahmedabad</option>
+        <option value="11">Ahmednagar</option>
+
+      </select>
+      <br>
       <input class="form-control" id="salary" name="salary" placeholder="Current/ Last Annual Salary(INR)*" type="number" required>
       <br>
       <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
       <br>
       <div class="form-group">
-          <label for="exampleFormControlFile1">Example file input</label>
-          <input type="file" class="form-control-file" id="exampleFormControlFile1">
-        </div>
+        <label for="exampleFormControlFile1">Example file input</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+      </div>
       <br>
       <button class="btn btn-primary pull-left" type="submit">Submit</button>
     </div>
   </div>
   <br>
-</form>
-
-<form>
-
-  <div class="form-group">
-    <label for="nameInput1">Name</label>
-    <input type="email" class="form-control" id="nameInput1">
-  </div>
-
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Example select</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-
-  <div class="form-group">
-    <label for="exampleFormControlFile1">Example file input</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-  </div>
 </form>
