@@ -1,26 +1,32 @@
 <br>
 <br>
-
-<form id="contact" class="container-fluid bg-grey">
+<div class="container">
+<form id="contact" class="container-fluid bg-grey" #candidateForm= "ngForm">
   <h2 class="text-center">Submit Your Resume</h2>
   <hr>
   <div class="row">
     <div class="form-group">
-      <input class="form-control" id="name" name="name" placeholder="Name*" type="text" required>
+      <input [(ngModel)]= "name" name="name" class="form-control" id="name" placeholder="Name*" type="text" required #nameControl= "ngModel">
+      <div class="alert alert-danger" *ngIf= "nameControl.touched && !nameControl.valid">Name is Required</div>
+
       <br>
-      <input class="form-control" id="email" name="email" placeholder="Email*" type="email" required>
+      <input [(ngModel)]= "email" name="email" class="form-control" id="email" placeholder="Email*" type="email" required #emailControl= "ngModel">
+      <div class="alert alert-danger" *ngIf= "emailControl.touched && !emailControl.valid">Email is Required</div>
+
       <br>
-      <input class="form-control" id="phone" name="phone" placeholder="Mobile No.*" type="number" required>
+      <input [(ngModel)]= "mobile" name="mobile" class="form-control" id="phone" placeholder="Mobile No.*" type="number" required #mobileControl= "ngModel">
+      <div class="alert alert-danger" *ngIf= "mobileControl.touched && !mobileControl.valid">Mobile No. is Required</div>
+
       <br>
-      <input class="form-control" id="company" name="company" placeholder="Company Name/ Fresher*" type="text" required>
+      <input [(ngModel)]= "organisation" name="organisation" class="form-control" id="company" placeholder="Company Name/ Fresher*" type="text" required>
       <br>
-      <input class="form-control" id="designation" name="designation" placeholder="Designation*" type="text" required>
+      <input [(ngModel)]= "designation" name="designation" class="form-control" id="designation" placeholder="Designation*" type="text" required>
       <br>
-      <input class="form-control" id="experience" name="experience" placeholder="Experience(in years)*" type="number" required>
+      <input [(ngModel)]= "experience" name="experience" class="form-control" id="experience" placeholder="Experience(in years)*" type="number" required>
       <br>
-      <select class="form-control" name="functional_area">
+      <select class="form-control" [(ngModel)]= "industry" name="industry">
         <option value="0" style="display:none;">Industry*</option>
-        <option value="62">Accounts, Finance, Tax, Company Secretary, Audit</option>
+        <option value="Accounts, Finance, Tax, Company Secretary, Audit">Accounts, Finance, Tax, Company Secretary, Audit</option>
         <option value="63">Analytics &amp; Business Intelligence</option>
         <option value="64">Architecture, Interior Design</option>
         <option value="65">Defence Forces, Security Services</option>
@@ -69,7 +75,7 @@
       </select>
 
       <br>
-      <select class="form-control" name="location">
+      <select [(ngModel)]= "location" class="form-control" name="location">
         <option value="0">Location*</option>
 
         <option value="1611">Adilabad</option>
@@ -82,9 +88,8 @@
 
       </select>
       <br>
-      <input class="form-control" id="salary" name="salary" placeholder="Current/ Last Annual Salary(INR)*" type="number" required>
-      <br>
-      <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+      <input class="form-control" id="salary" [(ngModel)]= "salary" name="salary" placeholder="Current/ Last Annual Salary(INR)*" type="number" required>
+
       <br>
       <!-- <div class="form-group">
         <label for="exampleFormControlFile1">Upload Your Resume</label>
@@ -96,3 +101,7 @@
   </div>
   <br>
 </form>
+
+{{ candidateForm.value | json }}
+
+</div>
