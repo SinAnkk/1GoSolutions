@@ -1,94 +1,92 @@
 <br>
 <br>
 <div class="container">
-<form id="contact" class="container-fluid bg-grey" #candidateForm= "ngForm">
+<form id="contact" class="container-fluid bg-grey" #candidateForm= "ngForm" (ngSubmit)= "saveCandidate(candidate)">
   <h2 class="text-center">Submit Your Resume</h2>
   <hr>
   <div class="row">
     <div class="form-group">
-      <input [(ngModel)]= "name" name="name" class="form-control" id="name" placeholder="Name*" type="text" required #nameControl= "ngModel">
-      <div class="alert alert-danger" *ngIf= "nameControl.touched && !nameControl.valid">Name is Required</div>
+      <input [(ngModel)]= "candidate.name" name="name" class="form-control" id="name" placeholder="Name*" type="text" required #name= "ngModel">
+      <div class="alert alert-danger" *ngIf= "name.touched && !name.valid">Name is Required</div>
 
       <br>
-      <input [(ngModel)]= "email" name="email" class="form-control" id="email" placeholder="Email*" type="email" required #emailControl= "ngModel">
-      <div class="alert alert-danger" *ngIf= "emailControl.touched && !emailControl.valid">Email is Required</div>
+      <input [(ngModel)]= "candidate.email" name="email" class="form-control" id="email" placeholder="Email*" type="email" required #email= "ngModel">
+      <div class="alert alert-danger" *ngIf= "email.touched && !email.valid">Email is Required</div>
 
       <br>
-      <input [(ngModel)]= "mobile" name="mobile" class="form-control" id="phone" placeholder="Mobile No.*" type="number" required #mobileControl= "ngModel">
-      <div class="alert alert-danger" *ngIf= "mobileControl.touched && !mobileControl.valid">Mobile No. is Required</div>
+      <input [(ngModel)]= "candidate.mobile" name="mobile" class="form-control" id="phone" placeholder="Mobile No.*" type="number" required #mobile= "ngModel">
+      <div class="alert alert-danger" *ngIf= "mobile.touched && !mobile.valid">Mobile No. is Required</div>
 
       <br>
-      <input [(ngModel)]= "organisation" name="organisation" class="form-control" id="company" placeholder="Company Name/ Fresher*" type="text" required>
+      <input [(ngModel)]= "candidate.organisation" name="organisation" class="form-control" id="company" placeholder="Company Name/ Fresher*" type="text" required>
       <br>
-      <input [(ngModel)]= "designation" name="designation" class="form-control" id="designation" placeholder="Designation*" type="text" required>
+      <input [(ngModel)]= "candidate.designation" name="designation" class="form-control" id="designation" placeholder="Designation*" type="text" required>
       <br>
-      <input [(ngModel)]= "experience" name="experience" class="form-control" id="experience" placeholder="Experience(in years)*" type="number" required>
+      <input [(ngModel)]= "candidate.experience" name="experience" class="form-control" id="experience" placeholder="Experience(in years)*" type="number" required>
       <br>
-      <select class="form-control" [(ngModel)]= "industry" name="industry">
+      <select class="form-control" [(ngModel)]= "candidate.industry" name="industry">
         <option value="0" style="display:none;">Industry*</option>
         <option value="Accounts, Finance, Tax, Company Secretary, Audit">Accounts, Finance, Tax, Company Secretary, Audit</option>
-        <option value="63">Analytics &amp; Business Intelligence</option>
-        <option value="64">Architecture, Interior Design</option>
-        <option value="65">Defence Forces, Security Services</option>
-        <option value="66">Design, Creative, User Experience</option>
-        <option value="67">Engineering Design, R&amp;D</option>
-        <option value="68">Executive Assistant, Front Office, Data Entry</option>
-        <option value="69">Export, Import, Merchandising</option>
-        <option value="70">Fashion Designing, Merchandising</option>
-        <option value="71">Financial Services, Banking, Investment, Insurance</option>
-        <option value="72">Hotels, Restaurants</option>
-        <option value="73">HR, Recruitment, Administration, IR</option>
-        <option value="75">IT Hardware, Technical Support, Telecom Eng</option>
-        <option value="76">IT Software - Application Programme, Maintenance</option>
-        <option value="77">IT Software - Client / Server Programming</option>
-        <option value="78">IT Software - DBA, Data warehousing</option>
-        <option value="79">IT Software - eCommerce, Internet Technologies</option>
-        <option value="80">IT Software - Embed, EDA, VLSI, ASIC, Chip Design</option>
-        <option value="81">IT Software - ERP, CRM</option>
-        <option value="82">IT Software - Mainframe</option>
-        <option value="83">IT Software - Middleware</option>
-        <option value="84">IT Software - Mobile</option>
-        <option value="85">IT Software - Network Administration, Security</option>
-        <option value="86">IT Software - Other</option>
-        <option value="87">IT Software - QA &amp; Testing</option>
-        <option value="88">IT Software - System Programming</option>
-        <option value="89">IT Software - Systems, EDP, MIS</option>
-        <option value="90">IT Software - Telecom Software</option>
-        <option value="74">ITES, BPO, KPO, LPO, Customer Service, Operation</option>
-        <option value="91">Journalism, Editing, Content</option>
-        <option value="92">Legal, Regulatory, Intellectual Property</option>
-        <option value="93">Marketing, Advertising, MR, PR, Media Planning</option>
-        <option value="94">Medical, Healthcare, R&amp;D, Pharma, Biotechnology</option>
-        <option value="95">Other</option>
-        <option value="96">Packaging</option>
-        <option value="97">Production, Manufacturing, Maintenance</option>
-        <option value="98">Sales, Retail, Business Development</option>
-        <option value="99">Self Employed, Entrepreneur, Independent Cons.</option>
-        <option value="100">Shipping</option>
-        <option value="101">Site Engineering, Project Management</option>
-        <option value="102">Strategy, Management Consulting, Corp. Planning</option>
-        <option value="103">Supply Chain, Logistics, Purchase, Materials</option>
-        <option value="104">Teaching, Education, Training, Counselling</option>
-        <option value="105">Top Management</option>
-        <option value="106">Travel, Tours, Ticketing, Airlines</option>
-        <option value="107">TV, Films, Production, Broadcasting</option>
+        <option value="Analytics & Business Intelligence">Analytics & Business Intelligence</option>
+        <option value="Architecture, Interior Design">Architecture, Interior Design</option>
+        <option value="Defence Forces, Security Services">Defence Forces, Security Services</option>
+        <option value="Design, Creative, User Experience">Design, Creative, User Experience</option>
+        <option value="Engineering Design, R&D">Engineering Design, R&D</option>
+        <option value="Executive Assistant, Front Office, Data Entry">Executive Assistant, Front Office, Data Entry</option>
+        <option value="Export, Import, Merchandising">Export, Import, Merchandising</option>
+        <option value="Fashion Designing, Merchandising">Fashion Designing, Merchandising</option>
+        <option value="Financial Services, Banking, Investment, Insurance">Financial Services, Banking, Investment, Insurance</option>
+        <option value="Hotels, Restaurants">Hotels, Restaurants</option>
+        <option value="HR, Recruitment, Administration, IR">HR, Recruitment, Administration, IR</option>
+        <option value="IT Hardware, Technical Support, Telecom Eng">IT Hardware, Technical Support, Telecom Eng</option>
+        <option value="IT Software - Application Programme, Maintenance">IT Software - Application Programme, Maintenance</option>
+        <option value="IT Software - Client / Server Programming">IT Software - Client / Server Programming</option>
+        <option value="IT Software - DBA, Data warehousing">IT Software - DBA, Data warehousing</option>
+        <option value="IT Software - eCommerce, Internet Technologies">IT Software - eCommerce, Internet Technologies</option>
+        <option value="IT Software - Embed, EDA, VLSI, ASIC, Chip Design">IT Software - Embed, EDA, VLSI, ASIC, Chip Design</option>
+        <option value="IT Software - ERP, CRM">IT Software - ERP, CRM</option>
+        <option value="IT Software - Mainframe">IT Software - Mainframe</option>
+        <option value="IT Software - Middleware">IT Software - Middleware</option>
+        <option value="IT Software - Mobile">IT Software - Mobile</option>
+        <option value="IT Software - Network Administration, Security">IT Software - Network Administration, Security</option>
+        <option value="IT Software - Other">IT Software - Other</option>
+        <option value="IT Software - QA & Testing">IT Software - QA & Testing</option>
+        <option value="IT Software - System Programming">IT Software - System Programming</option>
+        <option value="IT Software - Systems, EDP, MIS">IT Software - Systems, EDP, MIS</option>
+        <option value="IT Software - Telecom Software">IT Software - Telecom Software</option>
+        <option value="ITES, BPO, KPO, LPO, Customer Service, Operation">ITES, BPO, KPO, LPO, Customer Service, Operation</option>
+        <option value="Journalism, Editing, Content">Journalism, Editing, Content</option>
+        <option value="Legal, Regulatory, Intellectual Property">Legal, Regulatory, Intellectual Property</option>
+        <option value="Marketing, Advertising, MR, PR, Media Planning">Marketing, Advertising, MR, PR, Media Planning</option>
+        <option value="Medical, Healthcare, R&D, Pharma, Biotechnology">Medical, Healthcare, R&D, Pharma, Biotechnology</option>    
+        <option value="Packaging">Packaging</option>
+        <option value="Production, Manufacturing, Maintenance">Production, Manufacturing, Maintenance</option>
+        <option value="Sales, Retail, Business Development">Sales, Retail, Business Development</option>
+        <option value="Self Employed, Entrepreneur, Independent Cons.">Self Employed, Entrepreneur, Independent Cons.</option>
+        <option value="Shipping">Shipping</option>
+        <option value="Site Engineering, Project Management">Site Engineering, Project Management</option>
+        <option value="Strategy, Management Consulting, Corp. Planning">Strategy, Management Consulting, Corp. Planning</option>
+        <option value="Supply Chain, Logistics, Purchase, Materials">Supply Chain, Logistics, Purchase, Materials</option>
+        <option value="Teaching, Education, Training, Counselling">Teaching, Education, Training, Counselling</option>
+        <option value="Top Management">Top Management</option>
+        <option value="Travel, Tours, Ticketing, Airlines">Travel, Tours, Ticketing, Airlines</option>
+        <option value="TV, Films, Production, Broadcasting">TV, Films, Production, Broadcasting</option>
+        <option value="Other">Other</option>
       </select>
 
       <br>
-      <select [(ngModel)]= "location" class="form-control" name="location">
+      <select [(ngModel)]= "candidate.location" class="form-control" name="location">
         <option value="0">Location*</option>
-
-        <option value="1611">Adilabad</option>
-
-        <option value="9">Agartala</option>
-        <option value="1421">Agoura Hills</option>
-        <option value="10">Agra</option>
-        <option value="1">Ahmedabad</option>
-        <option value="11">Ahmednagar</option>
-
+        <option value="Delhi-NCR">Delhi-NCR</option>
+        <option value="Pune">Pune</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Ahmednagar">Ahmednagar</option>
+        <option value="Ahmedabad">Ahmedabad</option> 
       </select>
       <br>
-      <input class="form-control" id="salary" [(ngModel)]= "salary" name="salary" placeholder="Current/ Last Annual Salary(INR)*" type="number" required>
+      <input class="form-control" id="salary" [(ngModel)]= "candidate.salary" name="salary" placeholder="Current/ Last Annual Salary(INR)*" type="number" required>
 
       <br>
       <!-- <div class="form-group">
@@ -96,6 +94,7 @@
         <input type="file" class="form-control-file" id="exampleFormControlFile1">
       </div>
       <br> -->
+      
       <button class="btn btn-primary pull-left" type="submit">Submit</button>
     </div>
   </div>
@@ -103,5 +102,7 @@
 </form>
 
 {{ candidateForm.value | json }}
+<br>
+{{ candidate | json }}
 
 </div>
