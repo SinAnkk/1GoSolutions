@@ -23,7 +23,10 @@ h4 {
     padding: 100px 25px;
 }
 .container-fluid {
-    padding: 60px 50px;
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+    /* padding: 60px 50px; */
 }
 .bg-grey {
     background-color: #f6f6f6;

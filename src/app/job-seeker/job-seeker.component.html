@@ -6,26 +6,32 @@
   <hr>
   <div class="row">
     <div class="form-group">
-      <input [(ngModel)]= "candidate.name" name="name" class="form-control" id="name" placeholder="Name*" type="text" required #name= "ngModel">
+      <label for="name">Name*</label>
+      <input [(ngModel)]= "candidate.name" name="name" class="form-control" id="name" type="text" required #name= "ngModel">
       <div class="alert alert-danger" *ngIf= "name.touched && !name.valid">Name is Required</div>
 
       <br>
-      <input [(ngModel)]= "candidate.email" name="email" class="form-control" id="email" placeholder="Email*" type="email" required #email= "ngModel">
+      <label for="email">Email*</label>
+      <input [(ngModel)]= "candidate.email" name="email" class="form-control" id="email" type="email" required #email= "ngModel">
       <div class="alert alert-danger" *ngIf= "email.touched && !email.valid">Email is Required</div>
 
       <br>
-      <input [(ngModel)]= "candidate.mobile" name="mobile" class="form-control" id="phone" placeholder="Mobile No.*" type="number" required #mobile= "ngModel">
+      <label for="mobile">Mobile No.*</label>
+      <input [(ngModel)]= "candidate.mobile" name="mobile" class="form-control" id="phone" type="number" required #mobile= "ngModel">
       <div class="alert alert-danger" *ngIf= "mobile.touched && !mobile.valid">Mobile No. is Required</div>
 
       <br>
-      <input [(ngModel)]= "candidate.organisation" name="organisation" class="form-control" id="company" placeholder="Company Name/ Fresher*" type="text" required>
+      <label for="organization">Company Name/ Fresher*</label>
+      <input [(ngModel)]= "candidate.organisation" name="organization" class="form-control" id="company" type="text" required>
       <br>
-      <input [(ngModel)]= "candidate.designation" name="designation" class="form-control" id="designation" placeholder="Designation*" type="text" required>
+      <label for="designation">Designation*</label>
+      <input [(ngModel)]= "candidate.designation" name="designation" class="form-control" id="designation" type="text" required>
       <br>
-      <input [(ngModel)]= "candidate.experience" name="experience" class="form-control" id="experience" placeholder="Experience(in years)*" type="number" required>
+      <label for="experience">Experience(in years)*</label>
+      <input [(ngModel)]= "candidate.experience" name="experience" class="form-control" id="experience" type="number" required>
       <br>
+      <label for="industry">Industry*</label>
       <select class="form-control" [(ngModel)]= "candidate.industry" name="industry">
-        <option value="0" style="display:none;">Industry*</option>
         <option value="Accounts, Finance, Tax, Company Secretary, Audit">Accounts, Finance, Tax, Company Secretary, Audit</option>
         <option value="Analytics & Business Intelligence">Analytics & Business Intelligence</option>
         <option value="Architecture, Interior Design">Architecture, Interior Design</option>
@@ -75,8 +81,8 @@
       </select>
 
       <br>
+      <label for="location">Location*</label>
       <select [(ngModel)]= "candidate.location" class="form-control" name="location">
-        <option value="0">Location*</option>
         <option value="Delhi-NCR">Delhi-NCR</option>
         <option value="Pune">Pune</option>
         <option value="Mumbai">Mumbai</option>
@@ -86,7 +92,8 @@
         <option value="Ahmedabad">Ahmedabad</option> 
       </select>
       <br>
-      <input class="form-control" id="salary" [(ngModel)]= "candidate.salary" name="salary" placeholder="Current/ Last Annual Salary(INR)*" type="number" required>
+      <label for="salary">Current/ Last Annual Salary(INR)*</label>
+      <input class="form-control" id="salary" [(ngModel)]= "candidate.salary" name="salary"  type="number" required>
 
       <br>
       <!-- <div class="form-group">

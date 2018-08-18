@@ -18,7 +18,7 @@ h4 {
     margin-bottom: 30px;
 }  
 .jumbotron {
-    background-color: #f4511e;
+    background-color: #102951;
     color: #fff;
     padding: 100px 25px;
 }
@@ -29,11 +29,11 @@ h4 {
     background-color: #f6f6f6;
 }
 .logo-small {
-    color: #f4511e;
+    color: #102951;
     font-size: 50px;
 }
 .logo {
-    color: #f4511e;
+    color: #102951;
     font-size: 200px;
 }
 .thumbnail {
@@ -48,13 +48,13 @@ h4 {
 }
 .carousel-control.right, .carousel-control.left {
    background-image: none;
-   color: #f4511e;
+   color: #102951;
 }
 .carousel-indicators li {
-    border-color: #f4511e;
+    border-color: #102951;
 }
 .carousel-indicators li.active {
-    background-color: #f4511e;
+    background-color: #102951;
 }
 .item h4 {
     font-size: 19px;
@@ -67,7 +67,7 @@ h4 {
     font-style: normal;
 }
 .panel {
-    border: 1px solid #f4511e; 
+    border: 1px solid #102951; 
     border-radius:0 !important;
     transition: box-shadow 0.5s;
 }
@@ -75,13 +75,13 @@ h4 {
     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
 }
 .panel-footer .btn:hover {
-    border: 1px solid #f4511e;
+    border: 1px solid #102951;
     background-color: #fff !important;
-    color: #f4511e;
+    color: #102951;
 }
 .panel-heading {
     color: #fff !important;
-    background-color: #f4511e !important;
+    background-color: #102951 !important;
     padding: 25px;
     border-bottom: 1px solid transparent;
     border-top-left-radius: 0px;
@@ -101,7 +101,7 @@ h4 {
 }
 .panel-footer .btn {
     margin: 15px 0;
-    background-color: #f4511e;
+    background-color: #102951;
     color: #fff;
 }
 @media screen and (max-width: 768px) {
@@ -126,7 +126,7 @@ h4 {
 }
 .navbar {
     margin-bottom: 0;
-    background-color: #f4511e;
+    background-color: #102951;
     z-index: 9999;
     border: 0;
     font-size: 12px !important;
@@ -138,7 +138,7 @@ h4 {
     color: #fff !important;
 }
 .navbar-nav li a:hover, .navbar-nav li.active a {
-    color: #f4511e !important;
+    color: #102951 !important;
     background-color: #fff !important;
 }
 .navbar-default .navbar-toggle {
@@ -146,3 +146,55 @@ h4 {
     color: #fff !important;
 }
 /*----------NAVBAR----------*/
+
+.contact-us {
+	bottom: 0;
+	right: 10px;
+	width: 300px;
+	position: fixed;
+	z-index: 999;
+	box-shadow: 0 0 3px rgba(0,0,0,.32);
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,.32);
+	-moz-box-shadow: 0 0 3px rgba(0,0,0,.32);
+	-ms-box-shadow: 0 0 3px rgba(0,0,0,.32);
+}
+.contact-us .contact-header, .contact-us .contact-header:focus, .contact-us .contact-header:hover {
+	width: 300px;
+	height: 35px;
+	background: #00679e;
+	display: block;
+	color: #fff;
+	padding: 5px 15px;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 1.9;
+	border-radius: 3px 3px 0 0;
+}
+.collapse {
+	display: none;
+}
+.card {
+	background: #fff;
+	padding: 15px;
+	-webkit-box-shadow: 0 0 12px rgba(0,0,0,.06);
+	-moz-box-shadow: 0 0 12px rgba(0,0,0,.06);
+	box-shadow: 0 0 12px rgba(0,0,0,.06);
+}
+.p-b-10 {
+	padding-bottom: 10px;
+}
+.contact-us-card.collapse-card p, .contact-us-card.collapse-card label, .contact-us-card.collapse-card a {
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+.glyphicon {
+    right: 20px!important;
+    top: 7px;
+    left: inherit;
+}
+.more-less {
+    float: right!important;
+    color: #fff;
+    font-weight: bold!important;
+}                                                                                                                                                                                                                                                                                                                           

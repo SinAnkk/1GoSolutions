@@ -7,17 +7,29 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>
       </button>
-     <a class="navbar-brand" href=""><img  id="img-logo" src="assets/logo.png" alt="logo"></a> 
+      <a class="navbar-brand" href="">
+        <img id="img-logo" src="assets/logo.png" alt="logo">
+      </a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/home">HOME</a></li>
-        <li><a href="/about">ABOUT</a></li>
-        <li><a href="/services">SERVICES</a></li>
-        <li><a href="/jobSeeker">JOB SEEKER</a></li>
-        <li><a href="/contact">CONTACT US</a></li>
+        <li>
+          <a href="/home">HOME</a>
+        </li>
+        <li>
+          <a href="/about">ABOUT</a>
+        </li>
+        <li>
+          <a href="/services">SERVICES</a>
+        </li>
+        <li>
+          <a href="/jobSeeker">JOB SEEKER</a>
+        </li>
+        <li>
+          <a href="/contact">CONTACT US</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -29,6 +41,86 @@
 <br>
 
 <router-outlet></router-outlet>
+
+<div class="contact-us">
+  <div (click)="toggleCollapse()" class="contact-header" role="button"> Contact Us
+    <i class="more-less glyphicon" [class.glyphicon-plus]="isCollapsed"  [class.glyphicon-minus]="!isCollapsed"></i>
+</div>
+
+  <div *ngIf="!isCollapsed">
+
+    <div class="card">
+
+      <div class="p-t-0 p-b-10 contact-us-card collapse-card">
+        <div class="textwidget">
+          <h4>Corporates</h4>
+          <p>Would you like us to assist in your search for premium talent?</p>
+          <p>
+            <!--Start Modal for Fraudulent-->
+          </p>
+          <div class="additional-modal">
+            <div id="Modal1" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button class="close" type="button" data-dismiss="modal">×</button>
+                  </div>
+                  <div class="modal-body">
+                    <h2>Warning against fraudulent recruitment activity</h2>
+                    <p>Our attention has been drawn to the fraudulent recruitment activities by individuals posing as ABC Consultants
+                      or Employees of ABC Consultants, trying to trick candidates to part with large sums of money by promising
+                      them job offers.</p>
+                    <p>These individuals are also wrongfully using the company’s registered trademark as well as using fake
+                      and copied website to legitimise their activities to lure innocent candidates to fall into this trap.</p>
+                    <p>
+                      <strong>ABC Consultants does not charge any fee at any stage of its recruitment process from the candidate.</strong>
+                    </p>
+                    <p>We would like to categorically state that these communications are purely made with the intent to defraud
+                      the candidates. The company has not authorised any individual to acquire any kind of payment from candidates,
+                      towards our company or towards any individual in the recruitment process.</p>
+                    <p>If you have any questions or concerns, please contact
+                      <a href="mailto:info@abcconsultants.in">info@abcconsultants.in</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>
+            <!--End Modal for Fraudulent-->
+          </p>
+          <p>
+            <label for="">Phone: </label>
+            <a class="link" href="tel:+91 11 49343939"> +91 11 49343939</a>
+          </p>
+          <div class="clearfix">
+            <label for="">E-mail: </label>
+            <a class="link" href="mailto:client@abcconsultants.in" onclick="gtag('event', 'Click', {'event_category': 'Client Email', 'event_label': 'Done'});">
+            client@abcconsultants.in</a>
+          </div>
+          <div class="clearfix"></div>
+          <hr>
+          <h4>Candidates</h4>
+          <p>Are you looking for the right career opportunity?</p>
+          <p>
+            <label for=""></label>
+            <!--<a class="link" href="http://beta.abcconsultants.in/opportunities-submit-resume/">-->
+            <a class="link" href="http://www.abcconsultants.in/opportunities-submit-resume/">Submit your CV</a>
+          </p>
+          <div class="clearfix">
+            <label for="">Beware: </label>
+            <a class="link" href="#" data-toggle="modal" data-target="#Modal1"> Fraudulent recruitment activity</a>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+
+    </div>
+
+  </div>
+
+</div>
 
 <!-- FOOTER -->
 <footer class="container-fluid text-center">
