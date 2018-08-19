@@ -8,4 +8,5 @@ export class Candidate {
     name: string;
     organisation: string;
     salary: string;
+    resumeLink: string;
 }
