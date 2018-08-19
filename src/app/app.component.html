@@ -9,26 +9,26 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="">
-        <img id="img-logo" src="assets/logo.png" alt="logo">
+      <a class="navbar-brand" routerLink="">
+        <img id="img-logo" src="assets/1go-logo1.png" alt="logo">
       </a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a href="/home">HOME</a>
+          <a routerLink="/home">HOME</a>
         </li>
         <li>
-          <a href="/about">ABOUT</a>
+          <a routerLink="/about">ABOUT</a>
         </li>
         <li>
-          <a href="/services">SERVICES</a>
+          <a routerLink="/services">SERVICES</a>
         </li>
         <li>
-          <a href="/jobSeeker">JOB SEEKER</a>
+          <a routerLink="/jobSeeker">JOB SEEKER</a>
         </li>
         <li>
-          <a href="/contact">CONTACT US</a>
+          <a routerLink="/contact">CONTACT US</a>
         </li>
       </ul>
     </div>
@@ -44,8 +44,8 @@
 
 <div class="contact-us">
   <div (click)="toggleCollapse()" class="contact-header" role="button"> Contact Us
-    <i class="more-less glyphicon" [class.glyphicon-plus]="isCollapsed"  [class.glyphicon-minus]="!isCollapsed"></i>
-</div>
+    <i class="more-less glyphicon" [class.glyphicon-plus]="isCollapsed" [class.glyphicon-minus]="!isCollapsed"></i>
+  </div>
 
   <div *ngIf="!isCollapsed">
 
@@ -79,7 +79,7 @@
                       the candidates. The company has not authorised any individual to acquire any kind of payment from candidates,
                       towards our company or towards any individual in the recruitment process.</p>
                     <p>If you have any questions or concerns, please contact
-                      <a href="mailto:info@abcconsultants.in">info@abcconsultants.in</a>
+                      <a href="mailto:ankurs@1gosolutions.com">ankurs@1gosolutions.com</a>
                     </p>
                   </div>
                 </div>
@@ -91,12 +91,13 @@
           </p>
           <p>
             <label for="">Phone: </label>
-            <a class="link" href="tel:+91 11 49343939"> +91 11 49343939</a>
+            <a class="link" href="tel:+91-9730969960"> +91-9730969960</a>
           </p>
           <div class="clearfix">
             <label for="">E-mail: </label>
-            <a class="link" href="mailto:client@abcconsultants.in" onclick="gtag('event', 'Click', {'event_category': 'Client Email', 'event_label': 'Done'});">
-            client@abcconsultants.in</a>
+            <a class="link" href="mailto:ankurs@1gosolutions.com" onclick="gtag('event', 'Click', {'event_category': 'Client Email', 'event_label': 'Done'});">
+              ankurs@1gosolutions.com
+            </a>
           </div>
           <div class="clearfix"></div>
           <hr>
@@ -104,8 +105,7 @@
           <p>Are you looking for the right career opportunity?</p>
           <p>
             <label for=""></label>
-            <!--<a class="link" href="http://beta.abcconsultants.in/opportunities-submit-resume/">-->
-            <a class="link" href="http://www.abcconsultants.in/opportunities-submit-resume/">Submit your CV</a>
+            <a class="link" routerLink= "/jobSeeker">Submit your CV</a>
           </p>
           <div class="clearfix">
             <label for="">Beware: </label>
@@ -123,10 +123,72 @@
 </div>
 
 <!-- FOOTER -->
-<footer class="container-fluid text-center">
+<!-- <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
   <p>GO TO TOP</p>
-</footer>
+</footer> -->
+
+<!-- Footer -->
+<footer class="page-footer font-small teal pt-4">
+
+    <!-- Footer Text -->
+    <div class="container-fluid text-center text-md-left">
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+
+          <!-- Content -->
+          <h5 class="text-uppercase font-weight-bold">Why Us?</h5>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae harum esse fugiat. Itaque, culpa?</p>
+
+        </div>
+        <!-- Grid column -->
+        <br>
+        <br>
+        <br>
+        <!-- Grid column -->
+        <div class="col-md-6 mb-md-0 mb-3">
+
+                <div class="mb-5 flex-center">
+      
+                  <!-- Facebook -->
+                  <a class="fb-ic">
+                    <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  </a>
+                  <!-- Twitter -->
+                  <a class="tw-ic">
+                    <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  </a>
+                  <!-- Google +-->
+                  <a class="gplus-ic">
+                    <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  </a>
+                  <!--Linkedin -->
+                  <a class="li-ic">
+                    <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  </a>
+
+                </div>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Text -->
+
+    <!-- Copyright -->
+    <!-- <div class="footer-copyright text-center py-3">© 2018 Copyright:
+       <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
+    </div> -->
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
 <!-- FOOTER -->
