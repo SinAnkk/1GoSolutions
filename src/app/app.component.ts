@@ -9,6 +9,9 @@ export class AppComponent {
   title = 'app';
   isCollapsed : boolean= true;
 
+  clicked(event) {
+    event.currentTarget.classList.remove('in'); // To Remove
+  }
 
 
   toggleCollapse(){
