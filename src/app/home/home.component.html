@@ -232,22 +232,26 @@
         <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
       </div>
       <div class="col-sm-7">
-        <div class="row">
-          <div class="col-sm-6 form-group">
-            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        <form action="" (ngSubmit)="sendMail(contacts)">
+          <div class="row">
+            <div class="col-sm-6 form-group">
+              <input [(ngModel)]="contacts.name" class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+            </div>
+            <div class="col-sm-6 form-group">
+              <input [(ngModel)]="contacts.mobile" class="form-control" id="phone" name="phone" placeholder="Mobile No." type="number"
+                required>
+            </div>
           </div>
-          <div class="col-sm-6 form-group">
-            <input class="form-control" id="phone" name="phone" placeholder="Mobile No." type="number" required>
+          <input [(ngModel)]="contacts.email" class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          <br>
+          <textarea [(ngModel)]="contacts.comment" class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+          <br>
+          <div class="row">
+            <div class="col-sm-12 form-group">
+              <button class="btn btn-default pull-right" type="submit">Send</button>
+            </div>
           </div>
-        </div>
-        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        <br>
-        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-        <div class="row">
-          <div class="col-sm-12 form-group">
-            <button class="btn btn-default pull-right" type="submit">Send</button>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>
