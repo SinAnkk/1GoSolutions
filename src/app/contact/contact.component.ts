@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpRequest, HttpEvent } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -15,7 +16,7 @@ export class ContactComponent implements OnInit {
     comment: null
   }
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private router: Router) { }
 
   ngOnInit() {
   }
@@ -23,11 +24,13 @@ export class ContactComponent implements OnInit {
   sendMail(contact) {
     return this.httpClient.post(this.url, contact).subscribe(data => {
       console.log(data);
+      this.router.navigate(['/home']);
     },
       error => {
         console.log("Error", error);
+        
       });
-
+   
   }
 
 }
